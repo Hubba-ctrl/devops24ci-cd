@@ -37,6 +37,6 @@ This is the entire playbook I ran for this assignment
       community.mysql.mysql_user:
         name: webappuser
         password: secretpassword
-        priv: webappd:*
+        priv: webappdb.*:ALL
         login_unix_socket: /var/lib/mysql/mysql.sock
 ```
