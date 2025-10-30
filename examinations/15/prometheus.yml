@@ -13,8 +13,8 @@
           static_configs:
             - targets:
                 - 'node-exporter:9100'
-                - '192.168.121.150:9100'
-                - '192.168.121.71:9100'
+                - '192.168.121.92:9100'
+                - '192.168.121.208:9100'
           relabel_configs:
             - source_labels: [__address__]
               regex: 'node-exporter:9100'

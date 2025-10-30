@@ -1,13 +1,13 @@
 ---
-- name: Require sudo password for deploy (safely)
+- name: Require sudo password for deploy
   hosts: all
-  become: yes
+  become: true
   gather_facts: false
   tasks:
     - name: Set password for deploy
       ansible.builtin.user:
         name: deploy
-        password: "$$6$PMzGuXmepawNyFjf$HnZHZut9bAPc3LpejCtqtHat/ZNmgke1BdKpVHBBqx.An95GN38.EgQ8pSBcm6110AqNl.ZwAoyQOgF/H5ja21"
+        password: "$6$PMzGuXmepawNyFjf$HnZHZut9bAPc3LpejCtqtHatZNmgke1BdKpVHBBqxAn95GN38EgQ8pSBcm6110AqNl.ZwAoyQOgF/H5ja21"
         update_password: always
 
     - name: Enable password required sudo
